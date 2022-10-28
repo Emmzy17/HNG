@@ -12,6 +12,6 @@ class response_schema(BaseModel):
     bio: str
 
 
-app.get('/', response_model=response_schema)
+@app.get('/', response_model=response_schema)
 def request():
     return {"slackUsername": "shakzy", "backend": True, "age": 19, "bio": "I am a Software Engineer, with a love for Problem Solving and Building Thngs"}
