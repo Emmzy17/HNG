@@ -33,7 +33,7 @@ def request():
 def arithemetic(operation:arithemetic_schema):
     add = ["add", "addition", "+", "sum", "summation", ]
     sub = ["subtract", "sub", "subtraction", "-", "minus", "reduce"]
-    multiply = ["multiply", "product", "x", "*" , ""]
+    multiply = ["multiply", "product", "x", "*" , "times" ]
     find_number = [int(x) for x in re.findall(r'\d+', operation.operation_type)]
     operation_type = operation.operation_type
     x = operation.x
