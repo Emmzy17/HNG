@@ -31,7 +31,7 @@ def request():
 
 @app.post('/operation')
 def arithemetic(operation:arithemetic_schema):
-    add = ["add", "addition", "+"]
+    add = ["add", "addition", "+", "sum", "summation", ]
     sub = ["subtract", "sub", "subtraction", "-", "minus", "reduce"]
     multiply = ["multiply", "product", "x", "*" , ""]
     find_number = [int(x) for x in re.findall(r'\d+', operation.operation_type)]
