@@ -42,13 +42,13 @@ def arithemetic(operation:arithemetic_schema):
         return {'message': 'You need to input integers for operation or define your operation properly'}
     if operation_type.lower() in add:
         result =  x + y
-        return {"slackUsername": "shakzy", "operation" : operation_type, "result":result }
+        return {"slackUsername": "shakzy", "result":result, "operation_type" : operation_type }
     if operation_type.lower() in sub:
         result = x - y
-        return {"slackUsername": "shakzy", "operation" : operation_type, "result":result }
+        return {"slackUsername": "shakzy", "result":result, "operation_type" : operation_type }
     if operation_type.lower() in multiply:
         result = x*y
-        return {"slackUsername": "shakzy", "operation" : operation_type, "result":result }
+        return {"slackUsername": "shakzy",  "result":result, "operatio_type" : operation_type, }
     elif x or y == None:
         if find_number == []:
             return {'message' : 'Invalid Operation'}
@@ -56,13 +56,13 @@ def arithemetic(operation:arithemetic_schema):
             if i.lower() in add:
                 result = find_number[0] + find_number[1]
                 operation_type = "addition"
-                return {"slackUsername": "shakzy", "operation" : operation_type, "result":result }
+                return {"slackUsername": "shakzy", "result":result, "operation_type" : operation_type }
             if i.lower() in sub:
                 result = find_number[0] - find_number[1]
                 operation_type = "substraction"
-                return {"slackUsername": "shakzy", "operation" : operation_type, "result":result }
+                return {"slackUsername": "shakzy", "result":result, "operation_type" : operation_type }
             if i.lower() in multiply:
                 result = find_number[0] * find_number[1]
                 operation_type = "multiplication"
-                return {"slackUsername": "shakzy", "operation" : operation_type, "result":result }
+                return {"slackUsername": "shakzy", "result":result, "operation_type" : operation_type }
     return { "message" : "You did not specify any operation specify with add, multiply or subtract"}
